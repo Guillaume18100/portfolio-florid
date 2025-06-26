@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "title": "Film Poster",
+    "description": "A modern graphic creation combining typography and visual composition for the film 'Demain dès l'aube'.",
+    "image": "/img/Affiche_Final.jpg",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Digital Design", "Composition", "Typography"],
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Line Study",
+    "description": "Line drawing exploration in black and white for 'Demain dès l'aube' project.",
+    "image": "/img/Illustration_sans_titre.jpg",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Line Drawing", "Black and White", "Illustration"],
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "Sketch Study",
+    "description": "Preliminary sketch exploring character and composition concepts for the 'Demain dès l'aube' series.",
+    "image": "/img/croquis.jpeg",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Sketching", "Character Design", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 8,
+    "title": "Jesus Study",
+    "description": "Character study exploring religious iconography for the 'Demain dès l'aube' project.",
+    "image": "/img/Jesus_1.png",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Character Study", "Religious Art", "Concept Development"],
+    "featured": false
+  },
+  {
+    "id": 9,
+    "title": "Final Research",
+    "description": "Final research and development study for the 'Demain dès l'aube' project.",
+    "image": "/img/recherchefinal.png",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Final Study", "Research", "Project Development"],
+    "featured": false
+  },
+  {
+    "id": 10,
+    "title": "Research",
+    "description": "Exploratory research work for the 'Demain dès l'aube' project.",
+    "image": "/img/recherche t.png",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Research", "Exploration", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 13,
+    "title": "Titouan Animation",
+    "description": "Character animation for the 'Demain dès l'aube' project.",
+    "image": "/img/Titouan_Turn 2.gif",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Animation", "Character Design", "GIF"],
+    "featured": false
+  },
+  {
+    "id": 14,
+    "title": "Jesus Turn Animation",
+    "description": "Turn-around animation with wings for the 'Demain dès l'aube' project.",
+    "image": "/img/Jesus_Turn_Ailes.gif",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Animation", "Turn-around", "Character Design"],
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Delacroix Interpretation",
+    "description": "Contemporary reinterpretation inspired by classical masters.",
+    "image": "/img/Illustration_Delacroix.jpg",
+    "category": "Illustrations",
+    "year": 2024,
+    "techniques": ["Digital Illustration", "Composition", "Classical Art"],
+    "featured": true
+  },
+  {
+    "id": 5,
+    "title": "Abstract Exploration",
+    "description": "Experimental digital illustration exploring abstract forms and colors.",
+    "image": "/img/Illustration_sans_titre.jpg",
+    "category": "Illustrations",
+    "year": 2024,
+    "techniques": ["Digital Art", "Abstract", "Color Theory"],
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "Portfolio Monster",
+    "description": "Fantastical creation exploring the universe of imaginary bestiary.",
+    "image": "/img/Monstre_Portfolio.jpg",
+    "category": "Character Design",
+    "year": 2024,
+    "techniques": ["Concept Art", "Creature Design", "Visual Storytelling"],
+    "featured": true
+  },
+  {
+    "id": 7,
+    "title": "Character Study",
+    "description": "Character development sketches and design exploration.",
+    "image": "/img/croquis.jpeg",
+    "category": "Character Design",
+    "year": 2024,
+    "techniques": ["Character Design", "Sketching", "Concept Development"],
+    "featured": false
+  },
+  {
+    "id": 11,
+    "title": "Titouan Turn",
+    "description": "Character turn-around design for Titouan character.",
+    "image": "/img/turn titouan.jpeg",
+    "category": "Character Design",
+    "year": 2024,
+    "techniques": ["Character Design", "Turn-around", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 12,
+    "title": "Jesus Turn",
+    "description": "Character turn-around design for Jesus character.",
+    "image": "/img/turn jesus.jpeg",
+    "category": "Character Design",
+    "year": 2024,
+    "techniques": ["Character Design", "Turn-around", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 15,
+    "title": "Background Fresco - Black & White",
+    "description": "Black and white version of the background fresco for 'Demain dès l'aube' project.",
+    "image": "/img/Fresque-noir-blanc.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Background Design", "Black & White", "Environment Art"],
+    "featured": false
+  },
+  {
+    "id": 16,
+    "title": "Background Fresco - Color",
+    "description": "Colored version of the background fresco for 'Demain dès l'aube' project.",
+    "image": "/img/fresque.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Background Design", "Color", "Environment Art"],
+    "featured": false
+  },
+  {
+    "id": 18,
+    "title": "Props - Armoire",
+    "description": "Concept design for armoire prop in 'Demain dès l'aube' project.",
+    "image": "/img/armoire.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Concept Art", "Environment"],
+    "featured": false
+  },
+  {
+    "id": 19,
+    "title": "Props - Découper",
+    "description": "Cutting tool prop design for 'Demain dès l'aube' project.",
+    "image": "/img/decouper.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Concept Art", "Tool Design"],
+    "featured": false
+  },
+  {
+    "id": 20,
+    "title": "Props - Fusils",
+    "description": "Rifle prop designs for 'Demain dès l'aube' project.",
+    "image": "/img/fusils.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Weapon Design", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 21,
+    "title": "Props - Outils",
+    "description": "Various tools prop designs for 'Demain dès l'aube' project.",
+    "image": "/img/outils.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Tool Design", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 22,
+    "title": "Props - Tasses",
+    "description": "Cup and tableware prop designs for 'Demain dès l'aube' project.",
+    "image": "/img/taases.PNG?v=2",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Tableware", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 23,
+    "title": "Run Cycle",
+    "description": "Character run cycle animation for 'Demain dès l'aube' project.",
+    "image": "/img/Run cycle .mp4",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Animation", "Run Cycle", "Character Movement"],
+    "featured": false
+  }
+]

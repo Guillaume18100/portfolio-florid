@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-stone-50 text-stone-900;
+    @apply transition-colors duration-300;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    position: relative;
+  }
+  
+  .font-serif {
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+  }
+  
+  /* Black bands at top and bottom */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(to bottom, #000, rgba(0,0,0,0.8));
+    z-index: 1000;
+  }
+  
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(to top, #000, rgba(0,0,0,0.8));
+    z-index: 1000;
+  }
+}
+
+@layer components {
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    background-image: url('/img/Illustration_Delacroix.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  .hero-name-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(0,0,0,0.3);
+  }
+  
+  .nav-link-underline {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #fbbf24, #f59e0b);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-link-underline:hover::after {
+    transform: translateX(0);
+  }
+  
+  .btn-primary {
+    @apply bg-amber-500 hover:bg-amber-600 text-white font-medium py-3 px-6 rounded-full transition-all duration-200 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply border-2 border-amber-500 text-amber-600 hover:bg-amber-50 font-medium py-3 px-6 rounded-full transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Custom scale utilities for video effect */
+  .scale-200 {
+    transform: scale(2);
+  }
+  
+  .scale-250 {
+    transform: scale(2.5);
+  }
+  
+  .scale-300 {
+    transform: scale(3);
+  }
+
+  /* Video fullscreen scroll effect */
+  .video-scroll-container {
+    height: 300vh;
+  }
+  
+  .video-fresque {
+    width: 80%;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+  .video-fullscreen {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  /* Props organic layout - responsive */
+  @media (max-width: 768px) {
+    .props-organic .absolute {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      right: auto !important;
+      bottom: auto !important;
+      width: 80% !important;
+      max-width: none !important;
+      margin: 1rem auto !important;
+      display: block !important;
+    }
+  }
+}
