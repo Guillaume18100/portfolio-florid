@@ -1,39 +1,25 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎨</text></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio artistique - Découvrez les créations uniques d'une étudiante en école d'art" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Portfolio Artistique" />
-    <meta property="og:description" content="Découvrez les créations uniques d'une étudiante en école d'art" />
-    <meta property="og:image" content="/portfolio-florid/img/Affiche_Final.jpg" />
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Portfolio Artistique" />
-    <meta property="twitter:description" content="Découvrez les créations uniques d'une étudiante en école d'art" />
-    <meta property="twitter:image" content="/portfolio-florid/img/Affiche_Final.jpg" />
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <meta charset="utf-8">
     <title>Portfolio Artistique</title>
-    <script type="module" crossorigin src="/portfolio-florid/assets/index-1efdd97e.js"></script>
-    <link rel="stylesheet" href="/portfolio-florid/assets/index-cf9b5d89.css">
-    
-    <!-- Redirect script for GitHub Pages SPA -->
-    <script>
-      // Redirect to the main page to handle React Router routing
-      window.location.href = '/portfolio-florid/';
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      // Start single page app for GitHub Pages script
+      var pathSegmentsToKeep = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + 
+        '/?/' +
+        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+      // End single page app for GitHub Pages script
     </script>
   </head>
   <body>
-    <div id="root"></div>
   </body>
 </html>
