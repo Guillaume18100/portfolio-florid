@@ -253,7 +253,7 @@
     "id": 26,
     "title": "Animation - Médoc",
     "description": "Médoc animation sequence for 'Demain dès l'aube' project.",
-    "image": "/img/Médoc .MP4",
+    "image": "/img/Medoc.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": ["Animation", "Motion Design", "Storytelling"],
@@ -263,7 +263,7 @@
     "id": 27,
     "title": "Animation - Thé",
     "description": "Tea animation sequence for 'Demain dès l'aube' project.",
-    "image": "/img/Thé .MP4",
+    "image": "/img/The.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": ["Animation", "Motion Design", "Storytelling"],
@@ -277,16 +277,6 @@
     "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": ["Animation", "Dream Sequence", "Storytelling"],
-    "featured": false
-  },
-  {
-    "id": 23,
-    "title": "Run Cycle",
-    "description": "Character run cycle animation for 'Demain dès l'aube' project.",
-    "image": "/img/Run cycle .mp4",
-    "category": "Demain dès l'aube",
-    "year": 2024,
-    "techniques": ["Animation", "Run Cycle", "Character Movement"],
     "featured": false
   }
 ]

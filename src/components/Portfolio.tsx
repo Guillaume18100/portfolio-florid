@@ -542,28 +542,7 @@ const Portfolio: React.FC = () => {
                 </motion.div>
               </div>
 
-              {/* Run Cycle Video Section with Scroll Effect */}
-              <div className="space-y-6 max-w-6xl mx-auto">
-                <div className="mb-8">
-                  <motion.div
-                    variants={itemVariants}
-                    className="group relative overflow-hidden cursor-pointer"
-                    onClick={() => {
-                      const project = projects.find(p => p.title === "Run Cycle");
-                      if (project) setSelectedImage(project);
-                    }}
-                  >
-                    <video
-                      src="/img/Run cycle .mp4"
-                      className="w-full h-auto"
-                      autoPlay
-                      loop
-                      muted
-                      playsInline
-                    />
-                  </motion.div>
-                </div>
-              </div>
+              {/* Run Cycle Video Section with Scroll Effect - Removed since it's now in Animations section */}
 
               {/* Doctor's Drawers */}
               <div className="space-y-6 max-w-6xl mx-auto mb-16">
@@ -672,7 +651,9 @@ const Portfolio: React.FC = () => {
                 <h3 className="text-3xl font-bold text-center mb-12 font-serif">Animations</h3>
                 <div className="space-y-12">
                   {categoryProjects
-                    .filter(project => project.title.startsWith("Animation -"))
+                    .filter(project => 
+                      project.title.startsWith("Animation -")
+                    )
                     .map((project, index) => (
                       <AnimationVideo 
                         key={project.id} 
