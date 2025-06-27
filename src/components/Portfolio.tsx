@@ -317,7 +317,7 @@ const Portfolio: React.FC = () => {
                         onClick={() => setSelectedImage(categoryProjects.slice(3, 6)[0])}
                       >
                         <img
-                          src={categoryProjects.slice(3, 6)[0]?.image}
+                          src={getImagePath(categoryProjects.slice(3, 6)[0]?.image || '')}
                           alt={categoryProjects.slice(3, 6)[0]?.title}
                           className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                         />
@@ -338,7 +338,7 @@ const Portfolio: React.FC = () => {
                         onClick={() => setSelectedImage(categoryProjects.slice(3, 6)[2])}
                       >
                         <img
-                          src={categoryProjects.slice(3, 6)[2]?.image}
+                          src={getImagePath(categoryProjects.slice(3, 6)[2]?.image || '')}
                           alt={categoryProjects.slice(3, 6)[2]?.title}
                           className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                         />
@@ -361,7 +361,7 @@ const Portfolio: React.FC = () => {
                         onClick={() => setSelectedImage(categoryProjects.slice(3, 6)[1])}
                       >
                         <img
-                          src={categoryProjects.slice(3, 6)[1]?.image}
+                          src={getImagePath(categoryProjects.slice(3, 6)[1]?.image || '')}
                           alt={categoryProjects.slice(3, 6)[1]?.title}
                           className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                         />
