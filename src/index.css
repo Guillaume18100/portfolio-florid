@@ -57,7 +57,6 @@
     background-size: cover;
     background-position: center 20%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
   }
   
   .gallery-background {
@@ -65,6 +64,10 @@
     background-size: cover;
     background-position: center 20%;
     background-repeat: no-repeat;
+  }
+  
+  .force-repaint {
+    transform: translateZ(0);
   }
   
   .hero-name-shadow {
