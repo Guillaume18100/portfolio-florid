@@ -33,7 +33,7 @@ const Gallery: React.FC = () => {
                 >
                   <div className="flex items-center space-x-2 text-white hover:text-amber-300 transition-colors duration-300">
                     <span className="text-lg">🎨</span>
-                    <span className="font-semibold tracking-wide">PORTFOLIO</span>
+                    <span className="font-light tracking-wide">PORTFOLIO</span>
                   </div>
                   <div className="h-0.5 bg-amber-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </motion.div>
@@ -46,7 +46,7 @@ const Gallery: React.FC = () => {
                 >
                   <div className="flex items-center space-x-2 text-white hover:text-amber-300 transition-colors duration-300">
                     <span className="text-lg">👩‍🎨</span>
-                    <span className="font-semibold tracking-wide">ABOUT ME</span>
+                    <span className="font-light tracking-wide">ABOUT ME</span>
                   </div>
                   <div className="h-0.5 bg-amber-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </motion.div>
@@ -59,7 +59,7 @@ const Gallery: React.FC = () => {
                 >
                   <div className="flex items-center space-x-2 text-white hover:text-amber-300 transition-colors duration-300">
                     <span className="text-lg">�</span>
-                    <span className="font-semibold tracking-wide">CONTACT</span>
+                    <span className="font-light tracking-wide">CONTACT</span>
                   </div>
                   <div className="h-0.5 bg-amber-300 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                 </motion.div>
@@ -70,13 +70,7 @@ const Gallery: React.FC = () => {
       </motion.nav>
 
       {/* Background Image - Full Screen */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url('/img/Illustration_Delacroix.jpg')`,
-          backgroundPosition: 'center 20%',
-        }}
-      />
+      <div className="absolute inset-0 gallery-background" />
       
       {/* Gradient Overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />

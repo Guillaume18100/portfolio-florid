@@ -68,10 +68,10 @@ const ProjectDetail: React.FC = () => {
         >
           <div>
             <div className="flex items-center justify-between mb-4">
-              <span className="px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-medium">
+              <span className="px-4 py-2 bg-amber-100 text-amber-700 rounded-full text-sm font-light">
                 {project.category}
               </span>
-              <span className="text-stone-500 font-medium">
+              <span className="text-stone-500 font-light">
                 {project.year}
               </span>
             </div>
@@ -85,14 +85,14 @@ const ProjectDetail: React.FC = () => {
           </p>
 
           <div>
-            <h3 className="text-xl font-semibold text-stone-800 mb-4">
+            <h3 className="text-xl font-serif text-stone-800 mb-4">
               Techniques utilisées
             </h3>
             <div className="flex flex-wrap gap-3">
               {project.techniques.map((technique, index) => (
                 <span
                   key={index}
-                  className="px-4 py-2 bg-stone-100 text-stone-700 rounded-lg font-medium"
+                  className="px-4 py-2 bg-stone-100 text-stone-700 rounded-lg font-light"
                 >
                   {technique}
                 </span>
@@ -102,7 +102,7 @@ const ProjectDetail: React.FC = () => {
 
           {/* Additional Info */}
           <div className="bg-gradient-to-r from-amber-50 to-stone-50 p-6 rounded-xl">
-            <h3 className="text-lg font-semibold text-stone-800 mb-3">
+            <h3 className="text-lg font-serif text-stone-800 mb-3">
               À propos de cette œuvre
             </h3>
             <p className="text-stone-600">
@@ -138,7 +138,7 @@ const ProjectDetail: React.FC = () => {
                     />
                   </div>
                   <div className="p-4">
-                    <h4 className="font-semibold text-stone-800 group-hover:text-amber-600 transition-colors">
+                    <h4 className="font-serif text-stone-800 group-hover:text-amber-600 transition-colors">
                       {relatedProject.title}
                     </h4>
                     <p className="text-sm text-stone-500 mt-1">

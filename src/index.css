@@ -60,6 +60,13 @@
     background-attachment: fixed;
   }
   
+  .gallery-background {
+    background-image: url('/img/Illustration_Delacroix.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+  }
+  
   .hero-name-shadow {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5), 0 0 10px rgba(0,0,0,0.3);
   }

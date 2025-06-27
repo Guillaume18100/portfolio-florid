@@ -33,6 +33,11 @@ const Portfolio: React.FC = () => {
 
   // Get featured image for each category
   const getCategoryFeaturedImage = (category: string) => {
+    // Special case for Character Design - use marie.JPG as background
+    if (category === "Character Design") {
+      return "/img/marie.JPG";
+    }
+    
     const categoryProjects = projectsByCategory[category];
     const featuredProject = categoryProjects.find(p => p.featured) || categoryProjects[0];
     return featuredProject?.image || '';
@@ -80,6 +85,53 @@ const Portfolio: React.FC = () => {
     }
   };
 
+  // Animation Video Component with Intersection Observer
+  const AnimationVideo: React.FC<{ project: Project; onClick: () => void }> = ({ project, onClick }) => {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+      const video = videoRef.current;
+      if (!video) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.8) {
+              // Video entièrement visible (80% ou plus)
+              video.play();
+            } else {
+              // Video pas assez visible
+              video.pause();
+              video.currentTime = 0;
+            }
+          });
+        },
+        { threshold: [0.8] } // Déclenche quand 80% de la vidéo est visible
+      );
+
+      observer.observe(video);
+      
+      return () => observer.disconnect();
+    }, []);
+
+    return (
+      <motion.div
+        variants={itemVariants}
+        className="group relative cursor-pointer"
+        onClick={onClick}
+      >
+        <video
+          ref={videoRef}
+          src={project.image}
+          className="w-full h-auto object-contain"
+          loop
+          muted
+          playsInline
+        />
+      </motion.div>
+    );
+  };
+
   // Lightbox Modal Component
   const Lightbox = ({ project, onClose }: { project: Project; onClose: () => void }) => (
     <AnimatePresence>
@@ -110,7 +162,7 @@ const Portfolio: React.FC = () => {
           </button>
 
           {/* Image or Video */}
-          {project.image.endsWith('.mp4') || project.image.endsWith('.mov') ? (
+          {project.image.endsWith('.mp4') || project.image.endsWith('.mov') || project.image.endsWith('.MP4') ? (
             <video
               src={project.image}
               className="max-w-full max-h-[90vh] object-contain"
@@ -118,6 +170,13 @@ const Portfolio: React.FC = () => {
               autoPlay
               loop
               muted
+              playsInline
+              onLoadedData={(e) => {
+                // Ensure video can play
+                e.currentTarget.play().catch(() => {
+                  // If autoplay fails, that's ok
+                });
+              }}
             />
           ) : (
             <img
@@ -127,8 +186,8 @@ const Portfolio: React.FC = () => {
             />
           )}
 
-          {/* Image Info - Hidden for Run Cycle video */}
-          {project.title !== "Run Cycle" && (
+          {/* Image Info - Hidden for Run Cycle video and all animations */}
+          {project.title !== "Run Cycle" && !project.title.startsWith("Animation -") && (
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-6 text-white">
               <h3 className="text-2xl font-bold mb-2 font-serif">{project.title}</h3>
               {project.description && (
@@ -153,7 +212,7 @@ const Portfolio: React.FC = () => {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             onClick={() => setSelectedCategory(null)}
-            className="mb-8 flex items-center space-x-2 text-stone-600 hover:text-amber-600 transition-colors font-medium"
+            className="mb-8 flex items-center space-x-2 text-stone-600 hover:text-amber-600 transition-colors font-light"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -228,17 +287,7 @@ const Portfolio: React.FC = () => {
               {/* Character Design Research Section */}
               {categoryProjects.slice(3, 6).length > 0 && (
                 <div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
-                    className="text-center mb-12"
-                  >
-                    <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-4 font-serif">
-                      Character Design Research
-                    </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto"></div>
-                  </motion.div>
+                  <h3 className="text-3xl font-bold text-center mb-12 font-serif">Character Design Research</h3>
 
                   <motion.div
                     variants={containerVariants}
@@ -319,17 +368,7 @@ const Portfolio: React.FC = () => {
 
               {/* Character Turns Section */}
               <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                  className="text-center mb-12"
-                >
-                  <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-4 font-serif">
-                    Character Turns
-                  </h2>
-                  <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto"></div>
-                </motion.div>
+                <h3 className="text-3xl font-bold text-center mb-12 font-serif">Character Turns</h3>
 
                 <motion.div
                   variants={containerVariants}
@@ -445,17 +484,7 @@ const Portfolio: React.FC = () => {
 
               {/* Background Section */}
               <div>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.5 }}
-                  className="text-center mb-12"
-                >
-                  <h2 className="text-4xl md:text-5xl font-bold text-stone-800 mb-4 font-serif">
-                    Background
-                  </h2>
-                  <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto"></div>
-                </motion.div>
+                <h3 className="text-3xl font-bold text-center mb-12 font-serif">Background</h3>
 
                 <motion.div
                   variants={containerVariants}
@@ -534,9 +563,32 @@ const Portfolio: React.FC = () => {
                     />
                   </motion.div>
                 </div>
+              </div>
 
-                {/* Small space for natural flow */}
-                <div className="h-32"></div>
+              {/* Doctor's Drawers */}
+              <div className="space-y-6 max-w-6xl mx-auto mb-16">
+                <motion.div
+                  variants={itemVariants}
+                  className="group relative overflow-hidden transition-all duration-500 transform hover:scale-105 cursor-pointer"
+                  onClick={() => {
+                    const project = projects.find(p => p.title === "Doctor's Drawers");
+                    if (project) setSelectedImage(project);
+                  }}
+                >
+                  <img
+                    src="/img/tiroir.PNG"
+                    alt="Doctor's Drawers"
+                    className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
+                  />
+                  
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white">
+                      <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                      </svg>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
 
               {/* Props Section - At the bottom */}
@@ -614,6 +666,79 @@ const Portfolio: React.FC = () => {
                   </motion.div>
                 </div>
               </div>
+
+              {/* Animations Section - At the very bottom */}
+              <div className="space-y-12 max-w-6xl mx-auto mb-16">
+                <h3 className="text-3xl font-bold text-center mb-12 font-serif">Animations</h3>
+                <div className="space-y-12">
+                  {categoryProjects
+                    .filter(project => project.title.startsWith("Animation -"))
+                    .map((project, index) => (
+                      <AnimationVideo 
+                        key={project.id} 
+                        project={project} 
+                        onClick={() => setSelectedImage(project)}
+                      />
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          ) : selectedCategory === "Illustrations" ? (
+            /* Special layout for Illustrations - large stacked format */
+            <div className="space-y-16 max-w-5xl mx-auto px-4">
+              {categoryProjects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  variants={itemVariants}
+                  className="group relative overflow-hidden cursor-pointer"
+                  onClick={() => setSelectedImage(project)}
+                >
+                  <div className="relative transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
+                    
+                    {/* Subtle hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-8">
+                      <div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 className="text-xl font-semibold mb-2 font-serif">{project.title}</h3>
+                        <p className="text-sm opacity-90 max-w-md mx-auto">{project.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          ) : selectedCategory === "Character Design" ? (
+            /* Special layout for Character Design - large stacked format */
+            <div className="space-y-12 max-w-4xl mx-auto px-4">
+              {categoryProjects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  variants={itemVariants}
+                  className="group relative overflow-hidden cursor-pointer"
+                  onClick={() => setSelectedImage(project)}
+                >
+                  <div className="relative transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
+                    />
+                    
+                    {/* Subtle hover overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-8">
+                      <div className="text-white text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                        <h3 className="text-xl font-semibold mb-2 font-serif">{project.title}</h3>
+                        <p className="text-sm opacity-90 max-w-md mx-auto">{project.description}</p>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           ) : (
             /* Regular layout for other categories */
@@ -737,7 +862,7 @@ const Portfolio: React.FC = () => {
                   <p className="text-base opacity-90 mb-4 font-light">
                     {getCategoryDescription(category)}
                   </p>
-                  <div className="flex items-center text-amber-300 font-medium">
+                  <div className="flex items-center text-amber-300 font-light">
                     <span className="mr-2">Explore Collection</span>
                     <svg className="w-5 h-5 transform group-hover:translate-x-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

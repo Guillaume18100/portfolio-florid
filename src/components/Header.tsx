@@ -39,19 +39,19 @@ const Header: React.FC = () => {
           <div className="flex space-x-6">
             <Link
               to="/portfolio"
-              className="transition-colors font-medium text-stone-600 hover:text-amber-600"
+              className="transition-colors font-light text-stone-600 hover:text-amber-600"
             >
               Portfolio
             </Link>
             <Link
               to="/about"
-              className="transition-colors font-medium text-stone-600 hover:text-amber-600"
+              className="transition-colors font-light text-stone-600 hover:text-amber-600"
             >
               About
             </Link>
             <Link
               to="/contact"
-              className="transition-colors font-medium text-stone-600 hover:text-amber-600"
+              className="transition-colors font-light text-stone-600 hover:text-amber-600"
             >
               Contact
             </Link>

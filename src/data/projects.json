@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 50,
     "title": "Film Poster",
     "description": "A modern graphic creation combining typography and visual composition for the film 'Demain dès l'aube'.",
     "image": "/img/Affiche_Final.jpg",
@@ -20,7 +20,7 @@
     "featured": false
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Sketch Study",
     "description": "Preliminary sketch exploring character and composition concepts for the 'Demain dès l'aube' series.",
     "image": "/img/croquis.jpeg",
@@ -80,63 +80,53 @@
     "featured": false
   },
   {
+    "id": 3,
+    "title": "Abstract Exploration",
+    "description": "Experimental digital illustration exploring abstract forms and colors.",
+    "image": "/img/Monstre_Portfolio.jpg",
+    "category": "Illustrations",
+    "year": 2024,
+    "techniques": [],
+    "featured": true
+  },
+  {
     "id": 4,
     "title": "Delacroix Interpretation",
     "description": "Contemporary reinterpretation inspired by classical masters.",
     "image": "/img/Illustration_Delacroix.jpg",
     "category": "Illustrations",
     "year": 2024,
-    "techniques": ["Digital Illustration", "Composition", "Classical Art"],
-    "featured": true
+    "techniques": [],
+    "featured": false
   },
   {
-    "id": 5,
-    "title": "Abstract Exploration",
-    "description": "Experimental digital illustration exploring abstract forms and colors.",
-    "image": "/img/Illustration_sans_titre.jpg",
+    "id": 30,
+    "title": "Titouan Illustration",
+    "description": "Character illustration featuring Titouan in distinctive artistic style.",
+    "image": "/img/illu titou.jpeg",
     "category": "Illustrations",
     "year": 2024,
-    "techniques": ["Digital Art", "Abstract", "Color Theory"],
+    "techniques": [],
     "featured": false
   },
   {
-    "id": 6,
-    "title": "Portfolio Monster",
-    "description": "Fantastical creation exploring the universe of imaginary bestiary.",
-    "image": "/img/Monstre_Portfolio.jpg",
+    "id": 31,
+    "title": "Line Up Character Design",
+    "description": "Original characters lineup showcasing diverse character designs and proportions.",
+    "image": "/img/Peut_Être_Line_Up.jpg",
     "category": "Character Design",
     "year": 2024,
-    "techniques": ["Concept Art", "Creature Design", "Visual Storytelling"],
-    "featured": true
-  },
-  {
-    "id": 7,
-    "title": "Character Study",
-    "description": "Character development sketches and design exploration.",
-    "image": "/img/croquis.jpeg",
-    "category": "Character Design",
-    "year": 2024,
-    "techniques": ["Character Design", "Sketching", "Concept Development"],
+    "techniques": ["Character Design", "Concept Art", "Character Sheet"],
     "featured": false
   },
   {
-    "id": 11,
-    "title": "Titouan Turn",
-    "description": "Character turn-around design for Titouan character.",
-    "image": "/img/turn titouan.jpeg",
+    "id": 32,
+    "title": "Verkhovenski Character",
+    "description": "Character research inspired by Verkhovenski from Dostoevsky's 'Demons'.",
+    "image": "/img/Verkhovenski.jpg",
     "category": "Character Design",
     "year": 2024,
-    "techniques": ["Character Design", "Turn-around", "Concept Art"],
-    "featured": false
-  },
-  {
-    "id": 12,
-    "title": "Jesus Turn",
-    "description": "Character turn-around design for Jesus character.",
-    "image": "/img/turn jesus.jpeg",
-    "category": "Character Design",
-    "year": 2024,
-    "techniques": ["Character Design", "Turn-around", "Concept Art"],
+    "techniques": ["Character Design", "Portrait", "Concept Art"],
     "featured": false
   },
   {
@@ -200,13 +190,73 @@
     "featured": false
   },
   {
+    "id": 29,
+    "title": "Doctor's Drawers",
+    "description": "Medical drawers background element for 'Demain dès l'aube' project.",
+    "image": "/img/tiroir.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Background Design", "Environment Art", "Medical Props"],
+    "featured": false
+  },
+  {
     "id": 22,
     "title": "Props - Tasses",
     "description": "Cup and tableware prop designs for 'Demain dès l'aube' project.",
-    "image": "/img/taases.PNG?v=2",
+    "image": "/img/tasses.png",
     "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": ["Prop Design", "Tableware", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 24,
+    "title": "Animation - Fil",
+    "description": "Thread animation sequence for 'Demain dès l'aube' project.",
+    "image": "/img/Fil. 2.MP4",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Animation", "Motion Design", "Storytelling"],
+    "featured": false
+  },
+  {
+    "id": 25,
+    "title": "Animation - Main Final",
+    "description": "Final hand animation for 'Demain dès l'aube' project.",
+    "image": "/img/Main Final.MP4",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Animation", "Character Animation", "Hand Movement"],
+    "featured": false
+  },
+  {
+    "id": 26,
+    "title": "Animation - Médoc",
+    "description": "Médoc animation sequence for 'Demain dès l'aube' project.",
+    "image": "/img/Médoc .MP4",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Animation", "Motion Design", "Storytelling"],
+    "featured": false
+  },
+  {
+    "id": 27,
+    "title": "Animation - Thé",
+    "description": "Tea animation sequence for 'Demain dès l'aube' project.",
+    "image": "/img/Thé .MP4",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Animation", "Motion Design", "Storytelling"],
+    "featured": false
+  },
+  {
+    "id": 28,
+    "title": "Animation - Dream 25",
+    "description": "Dream sequence animation for 'Demain dès l'aube' project - final animation.",
+    "image": "/img/Dream 25.mp4",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Animation", "Dream Sequence", "Storytelling"],
     "featured": false
   },
   {
