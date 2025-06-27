@@ -3,6 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Project } from '../types';
 import projectsData from '../data/projects.json';
 
+// Utility function to get correct image path for both development and production
+const getImagePath = (imagePath: string) => {
+  // For assets in public folder, they are copied directly to dist root
+  // So we just need the path without any base prefix
+  return imagePath.startsWith('/') ? imagePath : `/${imagePath}`;
+};
+
 const Portfolio: React.FC = () => {
   const [projects] = useState<Project[]>(projectsData);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
@@ -35,12 +42,12 @@ const Portfolio: React.FC = () => {
   const getCategoryFeaturedImage = (category: string) => {
     // Special case for Character Design - use marie.JPG as background
     if (category === "Character Design") {
-      return "/img/marie.JPG";
+      return getImagePath("/img/marie.JPG");
     }
     
     const categoryProjects = projectsByCategory[category];
     const featuredProject = categoryProjects.find(p => p.featured) || categoryProjects[0];
-    return featuredProject?.image || '';
+    return getImagePath(featuredProject?.image || '');
   };
 
   // Get category description
@@ -164,7 +171,7 @@ const Portfolio: React.FC = () => {
           {/* Image or Video */}
           {project.image.endsWith('.mp4') || project.image.endsWith('.mov') || project.image.endsWith('.MP4') ? (
             <video
-              src={project.image}
+              src={getImagePath(project.image)}
               className="max-w-full max-h-[90vh] object-contain"
               controls
               autoPlay
@@ -180,7 +187,7 @@ const Portfolio: React.FC = () => {
             />
           ) : (
             <img
-              src={project.image}
+              src={getImagePath(project.image)}
               alt={project.title}
               className="max-w-full max-h-[90vh] object-contain"
             />
@@ -256,7 +263,7 @@ const Portfolio: React.FC = () => {
                     {/* Main Image/Video */}
                     {project.image.endsWith('.mp4') || project.image.endsWith('.mov') ? (
                       <video
-                        src={project.image}
+                        src={getImagePath(project.image)}
                         className="w-full h-auto"
                         loop
                         muted
@@ -266,7 +273,7 @@ const Portfolio: React.FC = () => {
                       />
                     ) : (
                       <img
-                        src={project.image}
+                        src={getImagePath(project.image)}
                         alt={project.title}
                         className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                       />
@@ -388,7 +395,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src="/img/turn jesus.jpeg"
+                        src={getImagePath("/img/turn jesus.jpeg")}
                         alt="Jesus Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -412,7 +419,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src="/img/turn titouan.jpeg"
+                        src={getImagePath("/img/turn titouan.jpeg")}
                         alt="Titouan Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -440,7 +447,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src="/img/Jesus_Turn_Ailes.gif"
+                          src={getImagePath("/img/Jesus_Turn_Ailes.gif")}
                           alt="Jesus Turn Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
@@ -464,7 +471,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src="/img/Titouan_Turn 2.gif"
+                          src={getImagePath("/img/Titouan_Turn 2.gif")}
                           alt="Titouan Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
@@ -502,7 +509,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <img
-                      src="/img/Fresque-noir-blanc.PNG"
+                      src={getImagePath("/img/Fresque-noir-blanc.PNG")}
                       alt="Background Fresco - Black & White"
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
@@ -526,7 +533,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <img
-                      src="/img/fresque.PNG"
+                      src={getImagePath("/img/fresque.PNG")}
                       alt="Background Fresco - Color"
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
@@ -554,7 +561,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <video
-                      src="/img/Run cycle .mp4"
+                      src={getImagePath("/img/Run cycle .mp4")}
                       className="w-full h-auto"
                       autoPlay
                       loop
@@ -576,7 +583,7 @@ const Portfolio: React.FC = () => {
                   }}
                 >
                   <img
-                    src="/img/tiroir.PNG"
+                    src={getImagePath("/img/tiroir.PNG")}
                     alt="Doctor's Drawers"
                     className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                   />
@@ -696,7 +703,7 @@ const Portfolio: React.FC = () => {
                 >
                   <div className="relative transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl">
                     <img
-                      src={project.image}
+                      src={getImagePath(project.image)}
                       alt={project.title}
                       className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                     />
@@ -724,7 +731,7 @@ const Portfolio: React.FC = () => {
                 >
                   <div className="relative transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl">
                     <img
-                      src={project.image}
+                      src={getImagePath(project.image)}
                       alt={project.title}
                       className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                     />
@@ -763,7 +770,7 @@ const Portfolio: React.FC = () => {
                   {/* Main Image/Video */}
                   {project.image.endsWith('.mp4') || project.image.endsWith('.mov') ? (
                     <video
-                      src={project.image}
+                      src={getImagePath(project.image)}
                       className="w-full h-auto"
                       loop
                       muted
@@ -773,7 +780,7 @@ const Portfolio: React.FC = () => {
                     />
                   ) : (
                     <img
-                      src={project.image}
+                      src={getImagePath(project.image)}
                       alt={project.title}
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
