@@ -11,11 +11,14 @@ const Portfolio: React.FC = () => {
   // Helper function to get correct image path for GitHub Pages
   const getImagePath = (imagePath: string) => {
     // Use Vite's import.meta.env.BASE_URL which is automatically set based on config
-    const baseUrl = import.meta.env.BASE_URL;
+    const baseUrl = import.meta.env.BASE_URL || '/';
+    
+    console.log("getImagePath called with:", imagePath);
+    console.log("Environment - DEV:", import.meta.env.DEV, "BASE_URL:", baseUrl);
     
     // Si on est en développement local, garder le chemin tel quel
     if (import.meta.env.DEV) {
-      console.log("DEV mode - base:", baseUrl, "image path:", imagePath);
+      console.log("DEV mode - returning:", imagePath);
       return imagePath;
     }
     
@@ -23,12 +26,12 @@ const Portfolio: React.FC = () => {
     if (imagePath.startsWith('/')) {
       // Supprimer le slash initial et ajouter la base URL
       const cleanPath = imagePath.substring(1);
-      const finalPath = `${baseUrl}${cleanPath}`;
-      console.log("PROD mode - base:", baseUrl, "original:", imagePath, "final:", finalPath);
+      const finalPath = baseUrl.endsWith('/') ? `${baseUrl}${cleanPath}` : `${baseUrl}/${cleanPath}`;
+      console.log("PROD mode - final path:", finalPath);
       return finalPath;
     }
     
-    console.log("PROD mode - no change:", imagePath);
+    console.log("PROD mode - no change needed:", imagePath);
     return imagePath;
   };
 
