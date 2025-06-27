@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Gallery: React.FC = () => {
+  const delacroixImage = '/img/Illustration_Delacroix.jpg';
+  
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Top Navigation Bar */}
@@ -70,7 +72,13 @@ const Gallery: React.FC = () => {
       </motion.nav>
 
       {/* Background Image - Full Screen */}
-      <div className="absolute inset-0 gallery-background" />
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('${delacroixImage}')`,
+          backgroundPosition: 'center 20%'
+        }}
+      />
       
       {/* Gradient Overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
