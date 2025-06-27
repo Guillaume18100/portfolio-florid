@@ -12,7 +12,7 @@ import './index.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portfolio-florid">
       <div className="min-h-screen bg-stone-50">
         <Header />
         <motion.main
