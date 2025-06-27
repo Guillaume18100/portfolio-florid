@@ -9,7 +9,10 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: true,
+    // Ensure public assets are copied correctly
+    copyPublicDir: true
   },
+  publicDir: 'public',
   optimizeDeps: {
     include: ['react', 'react-dom']
   }
