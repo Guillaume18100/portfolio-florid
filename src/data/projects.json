@@ -80,6 +80,26 @@
     "featured": false
   },
   {
+    "id": 33,
+    "title": "Jesus Turn Study",
+    "description": "Static turn-around study for Jesus character in 'Demain dès l'aube' project.",
+    "image": "/img/turn jesus.jpeg",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Character Turn", "Character Study", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 34,
+    "title": "Titouan Turn Study",
+    "description": "Character turn-around study for Titouan in 'Demain dès l'aube' project.",
+    "image": "/img/turn titouan.jpeg",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Character Turn", "Character Study", "Concept Art"],
+    "featured": false
+  },
+  {
     "id": 3,
     "title": "Abstract Exploration",
     "description": "Experimental digital illustration exploring abstract forms and colors.",
