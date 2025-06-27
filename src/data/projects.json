@@ -113,7 +113,7 @@
     "id": 4,
     "title": "Delacroix Interpretation",
     "description": "Contemporary reinterpretation inspired by classical masters.",
-    "image": "/img/Illustration_Delacroix.jpg",
+    "image": "./img/Illustration_Delacroix.jpg",
     "category": "Illustrations",
     "year": 2024,
     "techniques": [],

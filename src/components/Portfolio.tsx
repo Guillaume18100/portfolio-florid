@@ -10,13 +10,8 @@ const Portfolio: React.FC = () => {
 
   // Helper function to get correct image path for GitHub Pages
   const getImagePath = (imagePath: string) => {
-    // Check if we're running on GitHub Pages by looking at the current hostname/pathname
-    const isGitHubPages = window.location.hostname === 'guillaume18100.github.io' || 
-                         window.location.pathname.startsWith('/portfolio-florid');
-    
     console.log("getImagePath called with:", imagePath);
     console.log("Current location:", window.location.href);
-    console.log("Is GitHub Pages:", isGitHubPages);
     console.log("Environment - DEV:", import.meta.env.DEV, "BASE_URL:", import.meta.env.BASE_URL);
     
     // Si on est en développement local, garder le chemin tel quel
@@ -25,19 +20,14 @@ const Portfolio: React.FC = () => {
       return imagePath;
     }
  
-    // En production sur GitHub Pages, utiliser le chemin complet
+    // En production, gérer les chemins absolus et relatifs
     if (imagePath.startsWith('/')) {
-      let finalPath;
-      if (isGitHubPages) {
-        // Sur GitHub Pages, utiliser le chemin avec /portfolio-florid/
-        finalPath = `/portfolio-florid${imagePath}`;
-      } else {
-        // Autre environnement de production, utiliser BASE_URL
-        const baseUrl = import.meta.env.BASE_URL || '/';
-        const cleanPath = imagePath.substring(1);
-        finalPath = baseUrl.endsWith('/') ? `${baseUrl}${cleanPath}` : `${baseUrl}/${cleanPath}`;
-      }
-      console.log("PROD mode - final path:", finalPath);
+      const finalPath = `/portfolio-florid${imagePath}`;
+      console.log("PROD mode - absolute path - original:", imagePath, "final:", finalPath);
+      return finalPath;
+    } else if (imagePath.startsWith('./')) {
+      const finalPath = `/portfolio-florid/${imagePath.substring(2)}`;
+      console.log("PROD mode - relative path - original:", imagePath, "final:", finalPath);
       return finalPath;
     }
     
@@ -75,16 +65,17 @@ const Portfolio: React.FC = () => {
       return getImagePath("/img/marie.JPG");
     }
     
+    // Test spécial pour Illustrations - forcer le chemin complet
+    if (category === "Illustrations") {
+      const hardcodedPath = import.meta.env.DEV 
+        ? "/img/Illustration_Delacroix.jpg"
+        : "/portfolio-florid/img/Illustration_Delacroix.jpg";
+      console.log("Hardcoded path for Illustrations:", hardcodedPath);
+      return hardcodedPath;
+    }
+    
     const categoryProjects = projectsByCategory[category];
     const featuredProject = categoryProjects.find(p => p.featured) || categoryProjects[0];
-    
-    // Debug pour Illustrations
-    if (category === "Illustrations") {
-      console.log("Debug Illustrations:");
-      console.log("categoryProjects:", categoryProjects);
-      console.log("featuredProject:", featuredProject);
-      console.log("final image path:", featuredProject?.image ? getImagePath(featuredProject.image) : '');
-    }
     
     return featuredProject?.image ? getImagePath(featuredProject.image) : '';
   };
