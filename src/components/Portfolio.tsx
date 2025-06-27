@@ -10,9 +10,11 @@ const Portfolio: React.FC = () => {
 
   // Helper function to get correct image path for GitHub Pages
   const getImagePath = (imagePath: string) => {
+    const BASE_URL = import.meta.env.BASE_URL;
+    
     console.log("getImagePath called with:", imagePath);
-    console.log("Current location:", window.location.href);
-    console.log("Environment - DEV:", import.meta.env.DEV, "BASE_URL:", import.meta.env.BASE_URL);
+    console.log("BASE_URL:", BASE_URL);
+    console.log("Environment - DEV:", import.meta.env.DEV);
     
     // Si on est en développement local, garder le chemin tel quel
     if (import.meta.env.DEV) {
@@ -20,14 +22,18 @@ const Portfolio: React.FC = () => {
       return imagePath;
     }
  
-    // En production, gérer les chemins absolus et relatifs
+    // En production, utiliser BASE_URL + chemin sans slash initial
     if (imagePath.startsWith('/')) {
-      const finalPath = `/portfolio-florid${imagePath}`;
-      console.log("PROD mode - absolute path - original:", imagePath, "final:", finalPath);
+      // Supprimer le slash initial pour éviter la duplication
+      const cleanPath = imagePath.substring(1);
+      const finalPath = BASE_URL + cleanPath;
+      console.log("PROD mode - original:", imagePath, "clean:", cleanPath, "final:", finalPath);
       return finalPath;
     } else if (imagePath.startsWith('./')) {
-      const finalPath = `/portfolio-florid/${imagePath.substring(2)}`;
-      console.log("PROD mode - relative path - original:", imagePath, "final:", finalPath);
+      // Pour les chemins relatifs, supprimer ./ et utiliser BASE_URL
+      const cleanPath = imagePath.substring(2);
+      const finalPath = BASE_URL + cleanPath;
+      console.log("PROD mode - relative - original:", imagePath, "final:", finalPath);
       return finalPath;
     }
     
@@ -62,20 +68,20 @@ const Portfolio: React.FC = () => {
   const getCategoryFeaturedImage = (category: string) => {
     // Special case for Character Design - use marie.JPG as background
     if (category === "Character Design") {
-      return getImagePath("/img/marie.JPG");
-    }
-    
-    // Test spécial pour Illustrations - forcer le chemin complet
-    if (category === "Illustrations") {
-      const hardcodedPath = import.meta.env.DEV 
-        ? "/img/Illustration_Delacroix.jpg"
-        : "/portfolio-florid/img/Illustration_Delacroix.jpg";
-      console.log("Hardcoded path for Illustrations:", hardcodedPath);
-      return hardcodedPath;
+      return getImagePath("img/marie.JPG");
     }
     
     const categoryProjects = projectsByCategory[category];
     const featuredProject = categoryProjects.find(p => p.featured) || categoryProjects[0];
+    
+    // Debug pour Illustrations
+    if (category === "Illustrations") {
+      console.log("Debug Illustrations:");
+      console.log("categoryProjects:", categoryProjects);
+      console.log("featuredProject:", featuredProject);
+      console.log("featuredProject image:", featuredProject?.image);
+      console.log("final image path:", featuredProject?.image ? getImagePath(featuredProject.image) : '');
+    }
     
     return featuredProject?.image ? getImagePath(featuredProject.image) : '';
   };
@@ -425,7 +431,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src={getImagePath("/img/turn jesus.jpeg")}
+                        src={getImagePath("img/turn jesus.jpeg")}
                         alt="Jesus Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -449,7 +455,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src={getImagePath("/img/turn titouan.jpeg")}
+                        src={getImagePath("img/turn titouan.jpeg")}
                         alt="Titouan Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -477,7 +483,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src={getImagePath("/img/Jesus_Turn_Ailes.gif")}
+                          src={getImagePath("img/Jesus_Turn_Ailes.gif")}
                           alt="Jesus Turn Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
@@ -501,7 +507,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src={getImagePath("/img/Titouan_Turn 2.gif")}
+                          src={getImagePath("img/Titouan_Turn 2.gif")}
                           alt="Titouan Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
@@ -539,7 +545,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <img
-                      src={getImagePath("/img/Fresque-noir-blanc.PNG")}
+                      src={getImagePath("img/Fresque-noir-blanc.PNG")}
                       alt="Background Fresco - Black & White"
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
@@ -563,7 +569,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <img
-                      src={getImagePath("/img/fresque.PNG")}
+                      src={getImagePath("img/fresque.PNG")}
                       alt="Background Fresco - Color"
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
@@ -592,7 +598,7 @@ const Portfolio: React.FC = () => {
                   }}
                 >
                   <img
-                    src={getImagePath("/img/tiroir.PNG")}
+                    src={getImagePath("img/tiroir.PNG")}
                     alt="Doctor's Drawers"
                     className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                   />
