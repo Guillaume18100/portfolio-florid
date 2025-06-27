@@ -3,147 +3,123 @@
     "id": 50,
     "title": "Film Poster",
     "description": "A modern graphic creation combining typography and visual composition for the film 'Demain dès l'aube'.",
-    "image": "img/Affiche_Final.jpg",
+    "image": "/img/Affiche_Final.jpg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Digital Design",
-      "Composition",
-      "Typography"
-    ],
+    "techniques": ["Digital Design", "Composition", "Typography"],
     "featured": true
   },
   {
     "id": 2,
     "title": "Line Study",
     "description": "Line drawing exploration in black and white for 'Demain dès l'aube' project.",
-    "image": "img/Illustration_sans_titre.jpg",
+    "image": "/img/Illustration_sans_titre.jpg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Line Drawing",
-      "Black and White",
-      "Illustration"
-    ],
+    "techniques": ["Line Drawing", "Black and White", "Illustration"],
     "featured": false
   },
   {
     "id": 5,
     "title": "Sketch Study",
     "description": "Preliminary sketch exploring character and composition concepts for the 'Demain dès l'aube' series.",
-    "image": "img/croquis.jpeg",
+    "image": "/img/croquis.jpeg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Sketching",
-      "Character Design",
-      "Concept Art"
-    ],
+    "techniques": ["Sketching", "Character Design", "Concept Art"],
     "featured": false
   },
   {
     "id": 8,
     "title": "Jesus Study",
     "description": "Character study exploring religious iconography for the 'Demain dès l'aube' project.",
-    "image": "img/Jesus_1.png",
+    "image": "/img/Jesus_1.png",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Character Study",
-      "Religious Art",
-      "Concept Development"
-    ],
+    "techniques": ["Character Study", "Religious Art", "Concept Development"],
     "featured": false
   },
   {
     "id": 9,
     "title": "Final Research",
     "description": "Final research and development study for the 'Demain dès l'aube' project.",
-    "image": "img/recherchefinal.png",
-    "category": "Research",
+    "image": "/img/recherchefinal.png",
+    "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Final Study",
-      "Research",
-      "Project Development"
-    ],
+    "techniques": ["Final Study", "Research", "Project Development"],
     "featured": false
   },
   {
     "id": 10,
     "title": "Research",
     "description": "Exploratory research work for the 'Demain dès l'aube' project.",
-    "image": "img/recherche t.png",
-    "category": "Research",
+    "image": "/img/recherche t.png",
+    "category": "Demain dès l'aube",
     "year": 2024,
+<<<<<<< HEAD
     "techniques": [
       "Research",
       "Exploration",
       "Concept Art"
     ],
-    "featured": true
+=======
+    "techniques": ["Research", "Exploration", "Concept Art"],
+>>>>>>> parent of 66f6003 (Fix projects.json structure and move Run Cycle to Backgrounds section)
+    "featured": false
   },
   {
     "id": 13,
     "title": "Titouan Animation",
     "description": "Character animation for the 'Demain dès l'aube' project.",
-    "image": "img/Titouan_Turn 2.gif",
-    "category": "Animations",
+    "image": "/img/Titouan_Turn 2.gif",
+    "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Animation",
-      "Character Design",
-      "GIF"
-    ],
+    "techniques": ["Animation", "Character Design", "GIF"],
     "featured": false
   },
   {
     "id": 14,
     "title": "Jesus Turn Animation",
     "description": "Turn-around animation with wings for the 'Demain dès l'aube' project.",
-    "image": "img/Jesus_Turn_Ailes.gif",
-    "category": "Animations",
+    "image": "/img/Jesus_Turn_Ailes.gif",
+    "category": "Demain dès l'aube",
     "year": 2024,
+<<<<<<< HEAD
     "techniques": [
       "Animation",
       "Turn-around",
       "Character Design"
     ],
-    "featured": true
+=======
+    "techniques": ["Animation", "Turn-around", "Character Design"],
+>>>>>>> parent of 66f6003 (Fix projects.json structure and move Run Cycle to Backgrounds section)
+    "featured": false
   },
   {
     "id": 33,
     "title": "Jesus Turn Study",
     "description": "Static turn-around study for Jesus character in 'Demain dès l'aube' project.",
-    "image": "img/turn jesus.jpeg",
+    "image": "/img/turn jesus.jpeg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Character Turn",
-      "Character Study",
-      "Concept Art"
-    ],
+    "techniques": ["Character Turn", "Character Study", "Concept Art"],
     "featured": false
   },
   {
     "id": 34,
     "title": "Titouan Turn Study",
     "description": "Character turn-around study for Titouan in 'Demain dès l'aube' project.",
-    "image": "img/turn titouan.jpeg",
+    "image": "/img/turn titouan.jpeg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Character Turn",
-      "Character Study",
-      "Concept Art"
-    ],
+    "techniques": ["Character Turn", "Character Study", "Concept Art"],
     "featured": false
   },
   {
     "id": 3,
     "title": "Abstract Exploration",
     "description": "Experimental digital illustration exploring abstract forms and colors.",
-    "image": "img/Monstre_Portfolio.jpg",
+    "image": "/img/Monstre_Portfolio.jpg",
     "category": "Illustrations",
     "year": 2024,
     "techniques": [],
@@ -153,7 +129,7 @@
     "id": 4,
     "title": "Delacroix Interpretation",
     "description": "Contemporary reinterpretation inspired by classical masters.",
-    "image": "img/Illustration_Delacroix.jpg",
+    "image": "/img/Illustration_Delacroix.jpg",
     "category": "Illustrations",
     "year": 2024,
     "techniques": [],
@@ -163,7 +139,7 @@
     "id": 30,
     "title": "Titouan Illustration",
     "description": "Character illustration featuring Titouan in distinctive artistic style.",
-    "image": "img/illu titou.jpeg",
+    "image": "/img/illu titou.jpeg",
     "category": "Illustrations",
     "year": 2024,
     "techniques": [],
@@ -173,69 +149,111 @@
     "id": 31,
     "title": "Line Up Character Design",
     "description": "Original characters lineup showcasing diverse character designs and proportions.",
-    "image": "img/Peut_Être_Line_Up.jpg",
+    "image": "/img/Peut_Être_Line_Up.jpg",
     "category": "Character Design",
     "year": 2024,
-    "techniques": [
-      "Character Design",
-      "Concept Art",
-      "Character Sheet"
-    ],
+    "techniques": ["Character Design", "Concept Art", "Character Sheet"],
     "featured": false
   },
   {
     "id": 32,
     "title": "Verkhovenski Character",
     "description": "Character research inspired by Verkhovenski from Dostoevsky's 'Demons'.",
-    "image": "img/Verkhovenski.jpg",
+    "image": "/img/Verkhovenski.jpg",
     "category": "Character Design",
     "year": 2024,
+<<<<<<< HEAD
     "techniques": [
       "Character Design",
       "Portrait",
       "Concept Art"
     ],
-    "featured": true
-  },
-  {
-    "id": 23,
-    "title": "Portrait Study - Marie",
-    "description": "Character portrait study for 'Demain dès l'aube' project.",
-    "image": "img/marie.JPG",
-    "category": "Character Design",
-    "year": 2024,
-    "techniques": [
-      "Portrait",
-      "Character Study",
-      "Digital Art"
-    ],
+=======
+    "techniques": ["Character Design", "Portrait", "Concept Art"],
+>>>>>>> parent of 66f6003 (Fix projects.json structure and move Run Cycle to Backgrounds section)
     "featured": false
   },
   {
     "id": 15,
     "title": "Background Fresco - Black & White",
     "description": "Black and white version of the background fresco for 'Demain dès l'aube' project.",
-    "image": "img/Fresque-noir-blanc.PNG",
-    "category": "Backgrounds",
+    "image": "/img/Fresque-noir-blanc.PNG",
+    "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Background Design",
-      "Black & White",
-      "Environment Art"
-    ],
+    "techniques": ["Background Design", "Black & White", "Environment Art"],
     "featured": false
   },
   {
     "id": 16,
     "title": "Background Fresco - Color",
     "description": "Colored version of the background fresco for 'Demain dès l'aube' project.",
-    "image": "img/fresque.PNG",
-    "category": "Backgrounds",
+    "image": "/img/fresque.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Background Design", "Color", "Environment Art"],
+    "featured": false
+  },
+  {
+    "id": 18,
+    "title": "Props - Armoire",
+    "description": "Concept design for armoire prop in 'Demain dès l'aube' project.",
+    "image": "/img/armoire.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Concept Art", "Environment"],
+    "featured": false
+  },
+  {
+    "id": 19,
+    "title": "Props - Découper",
+    "description": "Cutting tool prop design for 'Demain dès l'aube' project.",
+    "image": "/img/decouper.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Concept Art", "Tool Design"],
+    "featured": false
+  },
+  {
+    "id": 20,
+    "title": "Props - Fusils",
+    "description": "Rifle prop designs for 'Demain dès l'aube' project.",
+    "image": "/img/fusils.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Weapon Design", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 21,
+    "title": "Props - Outils",
+    "description": "Various tools prop designs for 'Demain dès l'aube' project.",
+    "image": "/img/outils.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Prop Design", "Tool Design", "Concept Art"],
+    "featured": false
+  },
+  {
+    "id": 29,
+    "title": "Doctor's Drawers",
+    "description": "Medical drawers background element for 'Demain dès l'aube' project.",
+    "image": "/img/tiroir.PNG",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": ["Background Design", "Environment Art", "Medical Props"],
+    "featured": false
+  },
+  {
+    "id": 29,
+    "title": "Doctor's Drawers",
+    "description": "Medical drawers background element for 'Demain dès l'aube' project.",
+    "image": "/img/tiroir.PNG",
+    "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": [
       "Background Design",
-      "Color",
-      "Environment Art"
+      "Environment Art",
+      "Medical Props"
     ],
     "featured": false
   },
@@ -243,83 +261,13 @@
     "id": 35,
     "title": "Animation - Run Cycle",
     "description": "Run cycle animation sequence for 'Demain dès l'aube' project.",
-    "image": "img/Run cycle .mp4",
-    "category": "Backgrounds",
+    "image": "/img/Run cycle .mp4",
+    "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": [
-      "Background Animation",
+      "Animation",
       "Character Animation",
       "Run Cycle"
-    ],
-    "featured": false
-  },
-  {
-    "id": 29,
-    "title": "Doctor's Drawers",
-    "description": "Medical drawers background element for 'Demain dès l'aube' project.",
-    "image": "img/tiroir.PNG",
-    "category": "Backgrounds",
-    "year": 2024,
-    "techniques": [
-      "Background Design",
-      "Environment Art",
-      "Medical Props"
-    ],
-    "featured": true
-  },
-  {
-    "id": 18,
-    "title": "Props - Armoire",
-    "description": "Concept design for armoire prop in 'Demain dès l'aube' project.",
-    "image": "img/armoire.PNG",
-    "category": "Demain dès l'aube",
-    "year": 2024,
-    "techniques": [
-      "Prop Design",
-      "Concept Art",
-      "Environment"
-    ],
-    "featured": false
-  },
-  {
-    "id": 19,
-    "title": "Props - Découper",
-    "description": "Cutting tool prop design for 'Demain dès l'aube' project.",
-    "image": "img/decouper.PNG",
-    "category": "Demain dès l'aube",
-    "year": 2024,
-    "techniques": [
-      "Prop Design",
-      "Concept Art",
-      "Tool Design"
-    ],
-    "featured": false
-  },
-  {
-    "id": 20,
-    "title": "Props - Fusils",
-    "description": "Rifle prop designs for 'Demain dès l'aube' project.",
-    "image": "img/fusils.PNG",
-    "category": "Demain dès l'aube",
-    "year": 2024,
-    "techniques": [
-      "Prop Design",
-      "Weapon Design",
-      "Concept Art"
-    ],
-    "featured": false
-  },
-  {
-    "id": 21,
-    "title": "Props - Outils",
-    "description": "Various tools prop designs for 'Demain dès l'aube' project.",
-    "image": "img/outils.PNG",
-    "category": "Demain dès l'aube",
-    "year": 2024,
-    "techniques": [
-      "Prop Design",
-      "Tool Design",
-      "Concept Art"
     ],
     "featured": false
   },
@@ -327,84 +275,60 @@
     "id": 22,
     "title": "Props - Tasses",
     "description": "Cup and tableware prop designs for 'Demain dès l'aube' project.",
-    "image": "img/tasses.png",
+    "image": "/img/tasses.png",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Prop Design",
-      "Tableware",
-      "Concept Art"
-    ],
+    "techniques": ["Prop Design", "Tableware", "Concept Art"],
     "featured": false
   },
   {
     "id": 24,
     "title": "Animation - Fil",
     "description": "Thread animation sequence for 'Demain dès l'aube' project.",
-    "image": "img/Fil. 2.MP4",
+    "image": "/img/Fil. 2.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Animation",
-      "Motion Design",
-      "Storytelling"
-    ],
+    "techniques": ["Animation", "Motion Design", "Storytelling"],
     "featured": false
   },
   {
     "id": 25,
     "title": "Animation - Main Final",
     "description": "Final hand animation for 'Demain dès l'aube' project.",
-    "image": "img/Main Final.MP4",
+    "image": "/img/Main Final.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Animation",
-      "Character Animation",
-      "Hand Movement"
-    ],
+    "techniques": ["Animation", "Character Animation", "Hand Movement"],
     "featured": false
   },
   {
     "id": 26,
     "title": "Animation - Médoc",
     "description": "Médoc animation sequence for 'Demain dès l'aube' project.",
-    "image": "img/Medoc.MP4",
+    "image": "/img/Medoc.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Animation",
-      "Motion Design",
-      "Storytelling"
-    ],
+    "techniques": ["Animation", "Motion Design", "Storytelling"],
     "featured": false
   },
   {
     "id": 27,
     "title": "Animation - Thé",
     "description": "Tea animation sequence for 'Demain dès l'aube' project.",
-    "image": "img/The.MP4",
+    "image": "/img/The.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Animation",
-      "Motion Design",
-      "Storytelling"
-    ],
+    "techniques": ["Animation", "Motion Design", "Storytelling"],
     "featured": false
   },
   {
     "id": 28,
     "title": "Animation - Dream 25",
     "description": "Dream sequence animation for 'Demain dès l'aube' project - final animation.",
-    "image": "img/Dream 25.mp4",
+    "image": "/img/Dream 25.mp4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": [
-      "Animation",
-      "Dream Sequence",
-      "Storytelling"
-    ],
+    "techniques": ["Animation", "Dream Sequence", "Storytelling"],
     "featured": false
   }
 ]

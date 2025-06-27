@@ -8,39 +8,6 @@ const Portfolio: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedImage, setSelectedImage] = useState<Project | null>(null);
 
-  // Helper function to get correct image path for GitHub Pages
-  const getImagePath = (imagePath: string) => {
-    const BASE_URL = import.meta.env.BASE_URL;
-    
-    console.log("getImagePath called with:", imagePath);
-    console.log("BASE_URL:", BASE_URL);
-    console.log("Environment - DEV:", import.meta.env.DEV);
-    
-    // Si on est en développement local, garder le chemin tel quel
-    if (import.meta.env.DEV) {
-      console.log("DEV mode - returning:", imagePath);
-      return imagePath;
-    }
- 
-    // En production, utiliser BASE_URL + chemin sans slash initial
-    if (imagePath.startsWith('/')) {
-      // Supprimer le slash initial pour éviter la duplication
-      const cleanPath = imagePath.substring(1);
-      const finalPath = BASE_URL + cleanPath;
-      console.log("PROD mode - original:", imagePath, "clean:", cleanPath, "final:", finalPath);
-      return finalPath;
-    } else if (imagePath.startsWith('./')) {
-      // Pour les chemins relatifs, supprimer ./ et utiliser BASE_URL
-      const cleanPath = imagePath.substring(2);
-      const finalPath = BASE_URL + cleanPath;
-      console.log("PROD mode - relative - original:", imagePath, "final:", finalPath);
-      return finalPath;
-    }
-    
-    console.log("PROD mode - no change needed:", imagePath);
-    return imagePath;
-  };
-
   // Handle keyboard navigation
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -68,22 +35,12 @@ const Portfolio: React.FC = () => {
   const getCategoryFeaturedImage = (category: string) => {
     // Special case for Character Design - use marie.JPG as background
     if (category === "Character Design") {
-      return getImagePath("img/marie.JPG");
+      return "/img/marie.JPG";
     }
     
     const categoryProjects = projectsByCategory[category];
     const featuredProject = categoryProjects.find(p => p.featured) || categoryProjects[0];
-    
-    // Debug pour Illustrations
-    if (category === "Illustrations") {
-      console.log("Debug Illustrations:");
-      console.log("categoryProjects:", categoryProjects);
-      console.log("featuredProject:", featuredProject);
-      console.log("featuredProject image:", featuredProject?.image);
-      console.log("final image path:", featuredProject?.image ? getImagePath(featuredProject.image) : '');
-    }
-    
-    return featuredProject?.image ? getImagePath(featuredProject.image) : '';
+    return featuredProject?.image || '';
   };
 
   // Get category description
@@ -165,7 +122,7 @@ const Portfolio: React.FC = () => {
       >
         <video
           ref={videoRef}
-          src={getImagePath(project.image)}
+          src={project.image}
           className="w-full h-auto object-contain"
           loop
           muted
@@ -207,7 +164,7 @@ const Portfolio: React.FC = () => {
           {/* Image or Video */}
           {project.image.endsWith('.mp4') || project.image.endsWith('.mov') || project.image.endsWith('.MP4') ? (
             <video
-              src={getImagePath(project.image)}
+              src={project.image}
               className="max-w-full max-h-[90vh] object-contain"
               controls
               autoPlay
@@ -223,7 +180,7 @@ const Portfolio: React.FC = () => {
             />
           ) : (
             <img
-              src={getImagePath(project.image)}
+              src={project.image}
               alt={project.title}
               className="max-w-full max-h-[90vh] object-contain"
             />
@@ -299,7 +256,7 @@ const Portfolio: React.FC = () => {
                     {/* Main Image/Video */}
                     {project.image.endsWith('.mp4') || project.image.endsWith('.mov') ? (
                       <video
-                        src={getImagePath(project.image)}
+                        src={project.image}
                         className="w-full h-auto"
                         loop
                         muted
@@ -309,7 +266,7 @@ const Portfolio: React.FC = () => {
                       />
                     ) : (
                       <img
-                        src={getImagePath(project.image)}
+                        src={project.image}
                         alt={project.title}
                         className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                       />
@@ -347,7 +304,7 @@ const Portfolio: React.FC = () => {
                         onClick={() => setSelectedImage(categoryProjects.slice(3, 6)[0])}
                       >
                         <img
-                          src={getImagePath(categoryProjects.slice(3, 6)[0]?.image || '')}
+                          src={categoryProjects.slice(3, 6)[0]?.image}
                           alt={categoryProjects.slice(3, 6)[0]?.title}
                           className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                         />
@@ -368,7 +325,7 @@ const Portfolio: React.FC = () => {
                         onClick={() => setSelectedImage(categoryProjects.slice(3, 6)[2])}
                       >
                         <img
-                          src={getImagePath(categoryProjects.slice(3, 6)[2]?.image || '')}
+                          src={categoryProjects.slice(3, 6)[2]?.image}
                           alt={categoryProjects.slice(3, 6)[2]?.title}
                           className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                         />
@@ -391,7 +348,7 @@ const Portfolio: React.FC = () => {
                         onClick={() => setSelectedImage(categoryProjects.slice(3, 6)[1])}
                       >
                         <img
-                          src={getImagePath(categoryProjects.slice(3, 6)[1]?.image || '')}
+                          src={categoryProjects.slice(3, 6)[1]?.image}
                           alt={categoryProjects.slice(3, 6)[1]?.title}
                           className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                         />
@@ -431,7 +388,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src={getImagePath("img/turn jesus.jpeg")}
+                        src="/img/turn jesus.jpeg"
                         alt="Jesus Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -455,7 +412,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src={getImagePath("img/turn titouan.jpeg")}
+                        src="/img/turn titouan.jpeg"
                         alt="Titouan Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -483,7 +440,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src={getImagePath("img/Jesus_Turn_Ailes.gif")}
+                          src="/img/Jesus_Turn_Ailes.gif"
                           alt="Jesus Turn Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
@@ -507,7 +464,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src={getImagePath("img/Titouan_Turn 2.gif")}
+                          src="/img/Titouan_Turn 2.gif"
                           alt="Titouan Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
@@ -545,7 +502,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <img
-                      src={getImagePath("img/Fresque-noir-blanc.PNG")}
+                      src="/img/Fresque-noir-blanc.PNG"
                       alt="Background Fresco - Black & White"
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
@@ -569,7 +526,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <img
-                      src={getImagePath("img/fresque.PNG")}
+                      src="/img/fresque.PNG"
                       alt="Background Fresco - Color"
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
@@ -585,7 +542,28 @@ const Portfolio: React.FC = () => {
                 </motion.div>
               </div>
 
-              {/* Run Cycle Video Section with Scroll Effect - Removed since it's now in Animations section */}
+              {/* Run Cycle Video Section with Scroll Effect */}
+              <div className="space-y-6 max-w-6xl mx-auto">
+                <div className="mb-8">
+                  <motion.div
+                    variants={itemVariants}
+                    className="group relative overflow-hidden cursor-pointer"
+                    onClick={() => {
+                      const project = projects.find(p => p.title === "Run Cycle");
+                      if (project) setSelectedImage(project);
+                    }}
+                  >
+                    <video
+                      src="/img/Run cycle .mp4"
+                      className="w-full h-auto"
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                    />
+                  </motion.div>
+                </div>
+              </div>
 
               {/* Doctor's Drawers */}
               <div className="space-y-6 max-w-6xl mx-auto mb-16">
@@ -598,7 +576,7 @@ const Portfolio: React.FC = () => {
                   }}
                 >
                   <img
-                    src={getImagePath("img/tiroir.PNG")}
+                    src="/img/tiroir.PNG"
                     alt="Doctor's Drawers"
                     className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                   />
@@ -634,7 +612,7 @@ const Portfolio: React.FC = () => {
                             onClick={() => setSelectedImage(project)}
                           >
                             <img
-                              src={getImagePath(project.image)}
+                              src={project.image}
                               alt={project.title}
                               className="w-full h-auto object-contain max-h-60"
                             />
@@ -655,7 +633,7 @@ const Portfolio: React.FC = () => {
                             onClick={() => setSelectedImage(project)}
                           >
                             <img
-                              src={getImagePath(project.image)}
+                              src={project.image}
                               alt={project.title}
                               className="w-full h-auto object-contain max-h-80"
                             />
@@ -677,7 +655,7 @@ const Portfolio: React.FC = () => {
                             onClick={() => setSelectedImage(project)}
                           >
                             <img
-                              src={getImagePath(project.image)}
+                              src={project.image}
                               alt={project.title}
                               className="w-full h-auto object-contain max-h-60"
                             />
@@ -694,9 +672,7 @@ const Portfolio: React.FC = () => {
                 <h3 className="text-3xl font-bold text-center mb-12 font-serif">Animations</h3>
                 <div className="space-y-12">
                   {categoryProjects
-                    .filter(project => 
-                      project.title.startsWith("Animation -")
-                    )
+                    .filter(project => project.title.startsWith("Animation -"))
                     .map((project, index) => (
                       <AnimationVideo 
                         key={project.id} 
@@ -720,7 +696,7 @@ const Portfolio: React.FC = () => {
                 >
                   <div className="relative transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl">
                     <img
-                      src={getImagePath(project.image)}
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                     />
@@ -748,7 +724,7 @@ const Portfolio: React.FC = () => {
                 >
                   <div className="relative transform transition-all duration-700 hover:scale-[1.02] hover:shadow-2xl">
                     <img
-                      src={getImagePath(project.image)}
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-105"
                     />
@@ -787,7 +763,7 @@ const Portfolio: React.FC = () => {
                   {/* Main Image/Video */}
                   {project.image.endsWith('.mp4') || project.image.endsWith('.mov') ? (
                     <video
-                      src={getImagePath(project.image)}
+                      src={project.image}
                       className="w-full h-auto"
                       loop
                       muted
@@ -797,7 +773,7 @@ const Portfolio: React.FC = () => {
                     />
                   ) : (
                     <img
-                      src={getImagePath(project.image)}
+                      src={project.image}
                       alt={project.title}
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
