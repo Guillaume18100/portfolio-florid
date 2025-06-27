@@ -6,7 +6,11 @@
     "image": "/img/Affiche_Final.jpg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Digital Design", "Composition", "Typography"],
+    "techniques": [
+      "Digital Design",
+      "Composition",
+      "Typography"
+    ],
     "featured": true
   },
   {
@@ -16,7 +20,11 @@
     "image": "/img/Illustration_sans_titre.jpg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Line Drawing", "Black and White", "Illustration"],
+    "techniques": [
+      "Line Drawing",
+      "Black and White",
+      "Illustration"
+    ],
     "featured": false
   },
   {
@@ -26,7 +34,11 @@
     "image": "/img/croquis.jpeg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Sketching", "Character Design", "Concept Art"],
+    "techniques": [
+      "Sketching",
+      "Character Design",
+      "Concept Art"
+    ],
     "featured": false
   },
   {
@@ -36,7 +48,11 @@
     "image": "/img/Jesus_1.png",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Character Study", "Religious Art", "Concept Development"],
+    "techniques": [
+      "Character Study",
+      "Religious Art",
+      "Concept Development"
+    ],
     "featured": false
   },
   {
@@ -46,7 +62,11 @@
     "image": "/img/recherchefinal.png",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Final Study", "Research", "Project Development"],
+    "techniques": [
+      "Final Study",
+      "Research",
+      "Project Development"
+    ],
     "featured": false
   },
   {
@@ -56,15 +76,11 @@
     "image": "/img/recherche t.png",
     "category": "Demain dès l'aube",
     "year": 2024,
-<<<<<<< HEAD
     "techniques": [
       "Research",
       "Exploration",
       "Concept Art"
     ],
-=======
-    "techniques": ["Research", "Exploration", "Concept Art"],
->>>>>>> parent of 66f6003 (Fix projects.json structure and move Run Cycle to Backgrounds section)
     "featured": false
   },
   {
@@ -74,7 +90,11 @@
     "image": "/img/Titouan_Turn 2.gif",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Animation", "Character Design", "GIF"],
+    "techniques": [
+      "Animation",
+      "Character Design",
+      "GIF"
+    ],
     "featured": false
   },
   {
@@ -84,15 +104,11 @@
     "image": "/img/Jesus_Turn_Ailes.gif",
     "category": "Demain dès l'aube",
     "year": 2024,
-<<<<<<< HEAD
     "techniques": [
       "Animation",
       "Turn-around",
       "Character Design"
     ],
-=======
-    "techniques": ["Animation", "Turn-around", "Character Design"],
->>>>>>> parent of 66f6003 (Fix projects.json structure and move Run Cycle to Backgrounds section)
     "featured": false
   },
   {
@@ -102,7 +118,11 @@
     "image": "/img/turn jesus.jpeg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Character Turn", "Character Study", "Concept Art"],
+    "techniques": [
+      "Character Turn",
+      "Character Study",
+      "Concept Art"
+    ],
     "featured": false
   },
   {
@@ -112,7 +132,11 @@
     "image": "/img/turn titouan.jpeg",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Character Turn", "Character Study", "Concept Art"],
+    "techniques": [
+      "Character Turn",
+      "Character Study",
+      "Concept Art"
+    ],
     "featured": false
   },
   {
@@ -152,7 +176,11 @@
     "image": "/img/Peut_Être_Line_Up.jpg",
     "category": "Character Design",
     "year": 2024,
-    "techniques": ["Character Design", "Concept Art", "Character Sheet"],
+    "techniques": [
+      "Character Design",
+      "Concept Art",
+      "Character Sheet"
+    ],
     "featured": false
   },
   {
@@ -162,15 +190,11 @@
     "image": "/img/Verkhovenski.jpg",
     "category": "Character Design",
     "year": 2024,
-<<<<<<< HEAD
     "techniques": [
       "Character Design",
       "Portrait",
       "Concept Art"
     ],
-=======
-    "techniques": ["Character Design", "Portrait", "Concept Art"],
->>>>>>> parent of 66f6003 (Fix projects.json structure and move Run Cycle to Backgrounds section)
     "featured": false
   },
   {
@@ -180,7 +204,11 @@
     "image": "/img/Fresque-noir-blanc.PNG",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Background Design", "Black & White", "Environment Art"],
+    "techniques": [
+      "Background Design",
+      "Black & White",
+      "Environment Art"
+    ],
     "featured": false
   },
   {
@@ -190,7 +218,25 @@
     "image": "/img/fresque.PNG",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Background Design", "Color", "Environment Art"],
+    "techniques": [
+      "Background Design",
+      "Color",
+      "Environment Art"
+    ],
+    "featured": false
+  },
+  {
+    "id": 35,
+    "title": "Animation - Run Cycle",
+    "description": "Run cycle animation sequence for 'Demain dès l'aube' project.",
+    "image": "/img/Run cycle .mp4",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": [
+      "Animation",
+      "Character Animation",
+      "Run Cycle"
+    ],
     "featured": false
   },
   {
@@ -200,7 +246,11 @@
     "image": "/img/armoire.PNG",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Prop Design", "Concept Art", "Environment"],
+    "techniques": [
+      "Prop Design",
+      "Concept Art",
+      "Environment"
+    ],
     "featured": false
   },
   {
@@ -210,7 +260,11 @@
     "image": "/img/decouper.PNG",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Prop Design", "Concept Art", "Tool Design"],
+    "techniques": [
+      "Prop Design",
+      "Concept Art",
+      "Tool Design"
+    ],
     "featured": false
   },
   {
@@ -220,7 +274,11 @@
     "image": "/img/fusils.PNG",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Prop Design", "Weapon Design", "Concept Art"],
+    "techniques": [
+      "Prop Design",
+      "Weapon Design",
+      "Concept Art"
+    ],
     "featured": false
   },
   {
@@ -230,17 +288,11 @@
     "image": "/img/outils.PNG",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Prop Design", "Tool Design", "Concept Art"],
-    "featured": false
-  },
-  {
-    "id": 29,
-    "title": "Doctor's Drawers",
-    "description": "Medical drawers background element for 'Demain dès l'aube' project.",
-    "image": "/img/tiroir.PNG",
-    "category": "Demain dès l'aube",
-    "year": 2024,
-    "techniques": ["Background Design", "Environment Art", "Medical Props"],
+    "techniques": [
+      "Prop Design",
+      "Tool Design",
+      "Concept Art"
+    ],
     "featured": false
   },
   {
@@ -278,7 +330,11 @@
     "image": "/img/tasses.png",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Prop Design", "Tableware", "Concept Art"],
+    "techniques": [
+      "Prop Design",
+      "Tableware",
+      "Concept Art"
+    ],
     "featured": false
   },
   {
@@ -288,7 +344,11 @@
     "image": "/img/Fil. 2.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Animation", "Motion Design", "Storytelling"],
+    "techniques": [
+      "Animation",
+      "Motion Design",
+      "Storytelling"
+    ],
     "featured": false
   },
   {
@@ -298,7 +358,11 @@
     "image": "/img/Main Final.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Animation", "Character Animation", "Hand Movement"],
+    "techniques": [
+      "Animation",
+      "Character Animation",
+      "Hand Movement"
+    ],
     "featured": false
   },
   {
@@ -308,7 +372,11 @@
     "image": "/img/Medoc.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Animation", "Motion Design", "Storytelling"],
+    "techniques": [
+      "Animation",
+      "Motion Design",
+      "Storytelling"
+    ],
     "featured": false
   },
   {
@@ -318,7 +386,11 @@
     "image": "/img/The.MP4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Animation", "Motion Design", "Storytelling"],
+    "techniques": [
+      "Animation",
+      "Motion Design",
+      "Storytelling"
+    ],
     "featured": false
   },
   {
@@ -328,7 +400,11 @@
     "image": "/img/Dream 25.mp4",
     "category": "Demain dès l'aube",
     "year": 2024,
-    "techniques": ["Animation", "Dream Sequence", "Storytelling"],
+    "techniques": [
+      "Animation",
+      "Dream Sequence",
+      "Storytelling"
+    ],
     "featured": false
   }
 ]
