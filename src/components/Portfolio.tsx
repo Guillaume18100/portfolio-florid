@@ -10,23 +10,33 @@ const Portfolio: React.FC = () => {
 
   // Helper function to get correct image path for GitHub Pages
   const getImagePath = (imagePath: string) => {
-    // Use Vite's import.meta.env.BASE_URL which is automatically set based on config
-    const baseUrl = import.meta.env.BASE_URL || '/';
+    // Check if we're running on GitHub Pages by looking at the current hostname/pathname
+    const isGitHubPages = window.location.hostname === 'guillaume18100.github.io' || 
+                         window.location.pathname.startsWith('/portfolio-florid');
     
     console.log("getImagePath called with:", imagePath);
-    console.log("Environment - DEV:", import.meta.env.DEV, "BASE_URL:", baseUrl);
+    console.log("Current location:", window.location.href);
+    console.log("Is GitHub Pages:", isGitHubPages);
+    console.log("Environment - DEV:", import.meta.env.DEV, "BASE_URL:", import.meta.env.BASE_URL);
     
     // Si on est en développement local, garder le chemin tel quel
     if (import.meta.env.DEV) {
       console.log("DEV mode - returning:", imagePath);
       return imagePath;
     }
-    
-    // En production, utiliser la base URL de Vite
+ 
+    // En production sur GitHub Pages, utiliser le chemin complet
     if (imagePath.startsWith('/')) {
-      // Supprimer le slash initial et ajouter la base URL
-      const cleanPath = imagePath.substring(1);
-      const finalPath = baseUrl.endsWith('/') ? `${baseUrl}${cleanPath}` : `${baseUrl}/${cleanPath}`;
+      let finalPath;
+      if (isGitHubPages) {
+        // Sur GitHub Pages, utiliser le chemin avec /portfolio-florid/
+        finalPath = `/portfolio-florid${imagePath}`;
+      } else {
+        // Autre environnement de production, utiliser BASE_URL
+        const baseUrl = import.meta.env.BASE_URL || '/';
+        const cleanPath = imagePath.substring(1);
+        finalPath = baseUrl.endsWith('/') ? `${baseUrl}${cleanPath}` : `${baseUrl}/${cleanPath}`;
+      }
       console.log("PROD mode - final path:", finalPath);
       return finalPath;
     }
