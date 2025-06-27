@@ -53,6 +53,15 @@ const Portfolio: React.FC = () => {
     
     const categoryProjects = projectsByCategory[category];
     const featuredProject = categoryProjects.find(p => p.featured) || categoryProjects[0];
+    
+    // Debug pour Illustrations
+    if (category === "Illustrations") {
+      console.log("Debug Illustrations:");
+      console.log("categoryProjects:", categoryProjects);
+      console.log("featuredProject:", featuredProject);
+      console.log("final image path:", featuredProject?.image ? getImagePath(featuredProject.image) : '');
+    }
+    
     return featuredProject?.image ? getImagePath(featuredProject.image) : '';
   };
 
