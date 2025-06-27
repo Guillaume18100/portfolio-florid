@@ -53,7 +53,7 @@
   }
   
   .hero-background {
-    background-image: url('/img/Illustration_Delacroix.jpg');
+    background-image: url('./img/Illustration_Delacroix.jpg');
     background-size: cover;
     background-position: center 20%;
     background-repeat: no-repeat;
@@ -61,7 +61,7 @@
   }
   
   .gallery-background {
-    background-image: url('/img/Illustration_Delacroix.jpg');
+    background-image: url('./img/Illustration_Delacroix.jpg');
     background-size: cover;
     background-position: center 20%;
     background-repeat: no-repeat;

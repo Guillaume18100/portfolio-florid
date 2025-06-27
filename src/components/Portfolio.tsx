@@ -388,7 +388,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src="./img/turn jesus.jpeg"
+                        src="./img/turn-jesus.jpeg"
                         alt="Jesus Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -412,7 +412,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src="./img/turn titouan.jpeg"
+                        src="./img/turn-titouan.jpeg"
                         alt="Titouan Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -464,7 +464,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src="./img/Titouan_Turn 2.gif"
+                          src="./img/Titouan_Turn-2.gif"
                           alt="Titouan Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />

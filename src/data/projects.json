@@ -73,7 +73,7 @@
     "id": 10,
     "title": "Research",
     "description": "Exploratory research work for the 'Demain dès l'aube' project.",
-    "image": "./img/recherche t.png",
+    "image": "./img/recherche-t.png",
     "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": [
@@ -87,7 +87,7 @@
     "id": 13,
     "title": "Titouan Animation",
     "description": "Character animation for the 'Demain dès l'aube' project.",
-    "image": "./img/Titouan_Turn 2.gif",
+    "image": "./img/Titouan_Turn-2.gif",
     "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": [
@@ -115,7 +115,7 @@
     "id": 33,
     "title": "Jesus Turn Study",
     "description": "Static turn-around study for Jesus character in 'Demain dès l'aube' project.",
-    "image": "./img/turn jesus.jpeg",
+    "image": "./img/turn-jesus.jpeg",
     "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": [
@@ -129,7 +129,7 @@
     "id": 34,
     "title": "Titouan Turn Study",
     "description": "Character turn-around study for Titouan in 'Demain dès l'aube' project.",
-    "image": "./img/turn titouan.jpeg",
+    "image": "./img/turn-titouan.jpeg",
     "category": "Demain dès l'aube",
     "year": 2024,
     "techniques": [
@@ -163,7 +163,7 @@
     "id": 30,
     "title": "Titouan Illustration",
     "description": "Character illustration featuring Titouan in distinctive artistic style.",
-    "image": "./img/illu titou.jpeg",
+    "image": "./img/illu-titou.jpeg",
     "category": "Illustrations",
     "year": 2024,
     "techniques": [],
@@ -173,7 +173,7 @@
     "id": 31,
     "title": "Line Up Character Design",
     "description": "Original characters lineup showcasing diverse character designs and proportions.",
-    "image": "./img/Peut_Être_Line_Up.jpg",
+    "image": "./img/Peut_Etre_Line_Up.jpg",
     "category": "Character Design",
     "year": 2024,
     "techniques": [
