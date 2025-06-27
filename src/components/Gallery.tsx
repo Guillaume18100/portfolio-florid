@@ -1,9 +1,38 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import delacroixImg from '/img/Illustration_Delacroix.jpg';
 
 const Gallery: React.FC = () => {
+  const location = useLocation();
+  const [backgroundKey, setBackgroundKey] = useState(0);
+  const [imageLoaded, setImageLoaded] = useState(false);
+  
+  // Force background reload when component mounts or location changes
+  useEffect(() => {
+    // Only reload when we're actually on the home page
+    if (location.pathname === '/') {
+      setBackgroundKey(prev => prev + 1);
+      setImageLoaded(false);
+      
+      // Small delay to ensure component is fully mounted
+      const timer = setTimeout(() => {
+        // Preload the image with cache busting
+        const img = new Image();
+        img.onload = () => {
+          setImageLoaded(true);
+        };
+        img.onerror = () => {
+          // If image fails to load, still show it without the transition
+          setImageLoaded(true);
+        };
+        img.src = `${delacroixImg}?t=${Date.now()}`;
+      }, 100);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [location.pathname]);
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Top Navigation Bar */}
@@ -72,12 +101,20 @@ const Gallery: React.FC = () => {
 
       {/* Background Image - Full Screen */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        key={`background-${backgroundKey}`}
+        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 ${
+          imageLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
         style={{
-          backgroundImage: `url('${delacroixImg}')`,
+          backgroundImage: `url('${delacroixImg}?t=${backgroundKey}')`,
           backgroundPosition: 'center 20%'
         }}
       />
+      
+      {/* Fallback background while image loads */}
+      {!imageLoaded && (
+        <div className="absolute inset-0 bg-stone-800" />
+      )}
       
       {/* Gradient Overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
