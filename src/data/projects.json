@@ -226,20 +226,6 @@
     "featured": false
   },
   {
-    "id": 35,
-    "title": "Animation - Run Cycle",
-    "description": "Run cycle animation sequence for 'Demain dès l'aube' project.",
-    "image": "/img/Run cycle .mp4",
-    "category": "Demain dès l'aube",
-    "year": 2024,
-    "techniques": [
-      "Animation",
-      "Character Animation",
-      "Run Cycle"
-    ],
-    "featured": false
-  },
-  {
     "id": 18,
     "title": "Props - Armoire",
     "description": "Concept design for armoire prop in 'Demain dès l'aube' project.",
@@ -306,20 +292,6 @@
       "Background Design",
       "Environment Art",
       "Medical Props"
-    ],
-    "featured": false
-  },
-  {
-    "id": 35,
-    "title": "Animation - Run Cycle",
-    "description": "Run cycle animation sequence for 'Demain dès l'aube' project.",
-    "image": "/img/Run cycle .mp4",
-    "category": "Demain dès l'aube",
-    "year": 2024,
-    "techniques": [
-      "Animation",
-      "Character Animation",
-      "Run Cycle"
     ],
     "featured": false
   },
