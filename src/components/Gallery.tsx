@@ -1,23 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import delacroixImg from '/img/Illustration_Delacroix.jpg';
 
 const Gallery: React.FC = () => {
   const location = useLocation();
   const [backgroundKey, setBackgroundKey] = useState(0);
   const [imageLoaded, setImageLoaded] = useState(false);
   
+  // Construct proper image path with base URL for GitHub Pages
+  const getImagePath = (imagePath: string) => {
+    const base = import.meta.env.BASE_URL || '/';
+    // Remove leading slash from imagePath if present and ensure proper joining
+    const cleanPath = imagePath.startsWith('/') ? imagePath.slice(1) : imagePath;
+    return `${base}${cleanPath}`.replace(/\/+/g, '/');
+  };
+  
+  const delacroixImg = getImagePath('img/Illustration_Delacroix.jpg');
+  
   // Force background reload when component mounts or location changes
   useEffect(() => {
     // Only reload when we're actually on the home page
-    if (location.pathname === '/') {
+    if (location.pathname === '/' || location.pathname === import.meta.env.BASE_URL || location.pathname === `${import.meta.env.BASE_URL}/`) {
       setBackgroundKey(prev => prev + 1);
       setImageLoaded(false);
       
       // Small delay to ensure component is fully mounted
       const timer = setTimeout(() => {
-        // Preload the image with cache busting
+        // Preload the image
         const img = new Image();
         img.onload = () => {
           setImageLoaded(true);
@@ -26,12 +35,12 @@ const Gallery: React.FC = () => {
           // If image fails to load, still show it without the transition
           setImageLoaded(true);
         };
-        img.src = `${delacroixImg}?t=${Date.now()}`;
+        img.src = delacroixImg;
       }, 100);
       
       return () => clearTimeout(timer);
     }
-  }, [location.pathname]);
+  }, [location.pathname, delacroixImg]);
 
   return (
     <div className="min-h-screen relative overflow-hidden">
@@ -102,12 +111,14 @@ const Gallery: React.FC = () => {
       {/* Background Image - Full Screen */}
       <div 
         key={`background-${backgroundKey}`}
-        className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-500 ${
+        className={`absolute inset-0 transition-opacity duration-500 ${
           imageLoaded ? 'opacity-100' : 'opacity-0'
         }`}
         style={{
-          backgroundImage: `url('${delacroixImg}?t=${backgroundKey}')`,
-          backgroundPosition: 'center 20%'
+          backgroundImage: `url('${delacroixImg}')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center 20%',
+          backgroundRepeat: 'no-repeat'
         }}
       />
       

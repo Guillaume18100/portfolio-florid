@@ -52,19 +52,7 @@
     overflow: hidden;
   }
   
-  .hero-background {
-    background-image: url('./img/Illustration_Delacroix.jpg');
-    background-size: cover;
-    background-position: center 20%;
-    background-repeat: no-repeat;
-  }
-  
-  .gallery-background {
-    background-image: url('./img/Illustration_Delacroix.jpg');
-    background-size: cover;
-    background-position: center 20%;
-    background-repeat: no-repeat;
-  }
+  /* Background image styles moved to inline styles in components for proper base URL handling */
   
   .force-repaint {
     transform: translateZ(0);
