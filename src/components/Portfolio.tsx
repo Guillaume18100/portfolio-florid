@@ -37,6 +37,10 @@ const Portfolio: React.FC = () => {
     if (category === "Character Design") {
       return "./img/marie.JPG";
     }
+    // Special case for Illustrations - use Monstre_Portfolio.jpg as background
+    if (category === "Illustrations") {
+      return "./img/Monstre_Portfolio.jpg";
+    }
     
     const categoryProjects = projectsByCategory[category];
     const featuredProject = categoryProjects.find(p => p.featured) || categoryProjects[0];
@@ -554,7 +558,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <video
-                      src="./img/Run cycle .mp4"
+                      src="./img/Run-cycle.mp4"
                       className="w-full h-auto"
                       autoPlay
                       loop

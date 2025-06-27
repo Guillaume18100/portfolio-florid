@@ -378,5 +378,19 @@
       "Storytelling"
     ],
     "featured": false
+  },
+  {
+    "id": 51,
+    "title": "Run Cycle",
+    "description": "Character animation showcasing a complete run cycle loop demonstrating movement principles and fluid motion.",
+    "image": "./img/Run-cycle.mp4",
+    "category": "Demain dès l'aube",
+    "year": 2024,
+    "techniques": [
+      "Character Animation",
+      "Motion Design",
+      "Loop Animation"
+    ],
+    "featured": false
   }
 ]
