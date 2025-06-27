@@ -35,7 +35,7 @@ const Portfolio: React.FC = () => {
   const getCategoryFeaturedImage = (category: string) => {
     // Special case for Character Design - use marie.JPG as background
     if (category === "Character Design") {
-      return "/img/marie.JPG";
+      return "./img/marie.JPG";
     }
     
     const categoryProjects = projectsByCategory[category];
@@ -388,7 +388,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src="/img/turn jesus.jpeg"
+                        src="./img/turn jesus.jpeg"
                         alt="Jesus Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -412,7 +412,7 @@ const Portfolio: React.FC = () => {
                       }}
                     >
                       <img
-                        src="/img/turn titouan.jpeg"
+                        src="./img/turn titouan.jpeg"
                         alt="Titouan Turn"
                         className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                       />
@@ -440,7 +440,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src="/img/Jesus_Turn_Ailes.gif"
+                          src="./img/Jesus_Turn_Ailes.gif"
                           alt="Jesus Turn Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
@@ -464,7 +464,7 @@ const Portfolio: React.FC = () => {
                         }}
                       >
                         <img
-                          src="/img/Titouan_Turn 2.gif"
+                          src="./img/Titouan_Turn 2.gif"
                           alt="Titouan Animation"
                           className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110"
                         />
@@ -502,7 +502,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <img
-                      src="/img/Fresque-noir-blanc.PNG"
+                      src="./img/Fresque-noir-blanc.PNG"
                       alt="Background Fresco - Black & White"
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
@@ -526,7 +526,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <img
-                      src="/img/fresque.PNG"
+                      src="./img/fresque.PNG"
                       alt="Background Fresco - Color"
                       className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                     />
@@ -554,7 +554,7 @@ const Portfolio: React.FC = () => {
                     }}
                   >
                     <video
-                      src="/img/Run cycle .mp4"
+                      src="./img/Run cycle .mp4"
                       className="w-full h-auto"
                       autoPlay
                       loop
@@ -576,7 +576,7 @@ const Portfolio: React.FC = () => {
                   }}
                 >
                   <img
-                    src="/img/tiroir.PNG"
+                    src="./img/tiroir.PNG"
                     alt="Doctor's Drawers"
                     className="w-full h-auto transition-transform duration-700 group-hover:scale-110"
                   />

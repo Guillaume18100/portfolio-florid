@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Gallery: React.FC = () => {
-  const delacroixImage = '/img/Illustration_Delacroix.jpg';
+  const delacroixImage = './img/Illustration_Delacroix.jpg';
   
   return (
     <div className="min-h-screen relative overflow-hidden">
