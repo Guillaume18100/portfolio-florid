@@ -154,7 +154,7 @@
     "title": "Background Fresco - Black & White",
     "description": "Black and white version of the background fresco for 'Demain dès l'aube' project.",
     "image": "/img/Fresque-noir-blanc.PNG",
-    "category": "Demain dès l'aube",
+    "category": "Backgrounds",
     "year": 2024,
     "techniques": ["Background Design", "Black & White", "Environment Art"],
     "featured": false
@@ -164,9 +164,19 @@
     "title": "Background Fresco - Color",
     "description": "Colored version of the background fresco for 'Demain dès l'aube' project.",
     "image": "/img/fresque.PNG",
-    "category": "Demain dès l'aube",
+    "category": "Backgrounds",
     "year": 2024,
     "techniques": ["Background Design", "Color", "Environment Art"],
+    "featured": false
+  },
+  {
+    "id": 35,
+    "title": "Animation - Run Cycle",
+    "description": "Run cycle animation sequence for 'Demain dès l'aube' project.",
+    "image": "/img/Run cycle .mp4",
+    "category": "Backgrounds",
+    "year": 2024,
+    "techniques": ["Background Animation", "Character Animation", "Run Cycle"],
     "featured": false
   },
   {
@@ -214,10 +224,10 @@
     "title": "Doctor's Drawers",
     "description": "Medical drawers background element for 'Demain dès l'aube' project.",
     "image": "/img/tiroir.PNG",
-    "category": "Demain dès l'aube",
+    "category": "Backgrounds",
     "year": 2024,
     "techniques": ["Background Design", "Environment Art", "Medical Props"],
-    "featured": false
+    "featured": true
   },
   {
     "id": 22,
